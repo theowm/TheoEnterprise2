@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Handle members</title>
+</head>
+<body>
+<div>
+  <div th:each="employee: ${members}">
+    <p th:text="${employee.firstName}"></p>
+    <a th:href="@{/admin/showallmembers(id=${employee.id})}">Delete</a>
+  </div>
+</div>
+</body>
+</html>
