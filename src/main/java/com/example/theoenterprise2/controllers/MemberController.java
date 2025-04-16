@@ -44,7 +44,7 @@ public class MemberController {
         return ResponseEntity.ok(memberService.fetchMemberById(id));
     }
 
-    @GetMapping("/admin/deletememberbyid")
+    @GetMapping("/admin/deletemember")
     public String showAllEmployeesPage(Model model){
         model.addAttribute("members", memberService.fetchAllMembers());
         return "handlemembers";
@@ -53,7 +53,7 @@ public class MemberController {
     @GetMapping("/admin/showallmembers")
     public String deleteEmployeeById(@RequestParam int id){
         memberService.deleteMember(id);
-        return "redirect:/admin/deletememberbyid";
+        return "redirect:/admin/deletemember";
     }
 
 }
