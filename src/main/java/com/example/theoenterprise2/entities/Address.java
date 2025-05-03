@@ -21,7 +21,7 @@ public class Address {
     public Address() {
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

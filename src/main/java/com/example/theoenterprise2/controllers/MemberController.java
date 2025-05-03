@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@RestController
 @Controller
 public class MemberController {
 
@@ -55,5 +54,4 @@ public class MemberController {
         memberService.deleteMember(id);
         return "redirect:/admin/deletemember";
     }
-
 }
